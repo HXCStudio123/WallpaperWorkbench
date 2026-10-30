@@ -124,7 +124,7 @@ body[data-layout="right"] .stage{justify-content:flex-end;padding-left:44vw}
 .h .ttl svg{width:13px;height:13px;opacity:.7}
 .h .cnt{font-size:11px;color:var(--txt3);border:1px solid var(--line);border-radius:99px;padding:1px 8px}
 .h .sp{margin-left:auto;display:flex;gap:6px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:11.5px;color:var(--txt2);cursor:pointer;background:var(--card-solid);border:1px solid var(--line);border-radius:9px;padding:4px 10px}
+.btn{display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:12px;color:var(--txt2);cursor:pointer;background:var(--card-solid);border:1px solid var(--line);border-radius:9px;padding:5px 11px}
 .btn:hover{color:var(--txt);border-color:var(--line-strong)}
 .btn.pri{background:var(--accent);color:#fff;border-color:transparent}
 .btn.pri:hover{color:#fff}
@@ -182,13 +182,15 @@ textarea.note{width:100%;height:100%;min-height:96px;resize:none;line-height:1.6
 .pBtns{display:flex;gap:8px;align-items:center}
 .pDone{margin-left:auto;font-size:11.5px;color:var(--txt3)}
 
-.hud{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;display:flex;gap:6px;align-items:center;padding:6px 8px;border-radius:14px;
+.hud{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;display:flex;gap:7px;align-items:center;padding:8px 12px;border-radius:14px;
   background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
-  font-size:11.5px;color:var(--txt2);opacity:.9;transition:opacity .3s;max-width:94vw;flex-wrap:wrap;justify-content:center}
+  font-size:12.5px;color:var(--txt2);opacity:.9;transition:opacity .3s;max-width:94vw;flex-wrap:wrap;justify-content:center}
 .hud .sep{width:1px;height:16px;background:var(--line)}
 .hud select{padding:2px 6px;font-size:11px;border-radius:7px;max-width:140px}
 .hud .kbd{display:inline-block;min-width:16px;text-align:center;border:1px solid var(--line-strong);border-radius:5px;padding:0 4px;font-size:10px;color:var(--txt3)}
 .hud>*{white-space:nowrap}
+.hud-keys{display:none;gap:8px}
+.hud:hover .hud-keys{display:inline-flex}
 
 .toast{position:fixed;top:0;left:50%;transform:translate(-50%,-220%);background:var(--card-solid);border:1px solid var(--line-strong);box-shadow:var(--shadow);border-radius:13px;padding:12px 18px;font-size:13.5px;max-width:460px;transition:transform .35s cubic-bezier(.2,.9,.3,1.2);z-index:99}
 .toast.on{transform:translate(-50%,0)}
@@ -330,8 +332,7 @@ textarea.note{width:100%;height:100%;min-height:96px;resize:none;line-height:1.6
   <button class="btn sm" id="btnTheme"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="6.5"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13z" fill="currentColor" stroke="none"/></svg> 主题</button>
   <button class="btn sm" id="btnLayout"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="3.6" height="11" rx="1"/><rect x="8.2" y="4.5" width="3.6" height="11" rx="1"/><rect x="13.4" y="4.5" width="3.6" height="11" rx="1"/></svg> 布局</button>
   <span class="sep"></span>
-  <span><span class="kbd">E</span>编辑</span><span><span class="kbd">T</span>主题</span>
-  <span><span class="kbd">L</span>布局</span><span><span class="kbd">N</span>新待办</span>
+  <span class="hud-keys"><span class="kbd">E</span>编辑<span class="kbd">T</span>主题<span class="kbd">L</span>布局<span class="kbd">N</span>新待办</span>
 </div>
 
 <div class="toast" id="toast"><b>提醒</b><span id="toastTx"></span></div>
